@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #eef2f7; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #17202e; }
+.join, .chat { max-width: 520px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 10px 28px rgba(23, 32, 46, 0.12); }
+.join { padding: 28px; display: grid; gap: 12px; }
+.join h1 { margin: 0 0 6px; font-size: 1.5rem; }
+input { padding: 11px 12px; font-size: 1rem; border: 1px solid #c9d3e0; border-radius: 8px; min-width: 0; }
+button { padding: 11px 16px; font-size: 1rem; border: 0; border-radius: 8px; background: #1f6feb; color: #fff; cursor: pointer; }
+button:hover { filter: brightness(0.92); }
+.chat { display: flex; flex-direction: column; height: min(80vh, 640px); overflow: hidden; }
+.chat header { padding: 14px 18px; background: #1f6feb; color: #fff; font-weight: 600; }
+.list { flex: 1; overflow-y: auto; list-style: none; margin: 0; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.msg { display: flex; flex-direction: column; align-items: flex-start; max-width: 80%; }
+.msg.mine { align-self: flex-end; align-items: flex-end; }
+.who { font-size: 0.75rem; color: #6a7789; margin-bottom: 2px; }
+.bubble { background: #eef2f7; padding: 8px 12px; border-radius: 12px; overflow-wrap: anywhere; }
+.mine .bubble { background: #1f6feb; color: #fff; }
+.system { text-align: center; font-size: 0.8rem; color: #6a7789; }
+.composer { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #e1e7ef; }
+.composer input { flex: 1; }
+@media (max-width: 560px) { .join, .chat { margin: 0; border-radius: 0; height: 100vh; } }
